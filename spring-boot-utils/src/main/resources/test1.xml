@@ -1,0 +1,8 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Body>
+        <NS1:HIPMessageServerResponse xmlns:NS1="http://esb.ewell.cc">
+            <NS1:output>
+                <![CDATA[]]></NS1:output>
+        </NS1:HIPMessageServerResponse>
+    </soapenv:Body>
+</soapenv:Envelope>

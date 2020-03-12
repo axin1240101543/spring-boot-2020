@@ -1,0 +1,5 @@
+
+1、无法解析templates目录下的index.btl
+解决方案：将Spring Boot的版本由2.0.6.RELEASE升级到2.1.0.RELEASE
+
+2、

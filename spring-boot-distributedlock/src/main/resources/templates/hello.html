@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>Hello World</title>
+    <link rel="stylesheet" th:href="@{/layui.2.2.3/layui/css/layui.css}"/>
+</head>
+<body>
+<h3>欢迎来到主页</h3>
+姓名：<span th:text="${name}">123</span>
+年龄：<span th:text="${age}">456</span>
+<br>
+<a th:href="@{https://www.baidu.com}">百度一下</a>
+</body>
+<script type="text/javascript" th:src="@{/layui.2.2.3/layui/layui.js}"></script>
+</html>

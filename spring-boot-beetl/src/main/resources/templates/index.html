@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>${beetl}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+</head>
+<!-- 定义临时变量，默认定界符<% %> -->
+<%
+var a = "123";
+%>
+<!--
+ctxPath是Beetl的默认共享变量，表示Web应用ContextPath
+-->
+<body>
+<h>默认共享变量ctxPath：${ctxPath}</h><br/>
+<p>共享变量：${beetlTitle}</p>
+<p>全局变量：${test}</p>
+<p>临时变量：${a}</p>
+<p>遍历：<br>
+    <table border="1">
+    <tr>
+        <th>姓名</th>
+        <th>年龄</th>
+        <th>创建时间</th>
+        <th>更新时间</th>
+    </tr>
+    <% for(user in users){ %>
+    <tr>
+        <td>${user.name}</td>
+        <td>${user.age}</td>
+        <td>${user.createTime, "yyyy-MM-dd HH:mm:ss"}</td>
+        <td>${user.updateTime, "yyyy-MM-dd HH:mm:ss"}</td>
+    </tr>
+    <%}%>
+</table>
+</p>
+<p>安全输出：<br>
+    ${users[0].name!}&nbsp; ${users[0].extFields!"Gita"}
+</p>
+<p>内置方法：<br>
+    <% if(isNotEmpty(users[0].age)){ %>
+    ${users[0].age}
+    <% }else{ %>
+    --
+    <% } %>
+</p>
+</body>

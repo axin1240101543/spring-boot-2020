@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Title</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+@#ajax tags:{
+<h3 style="color: red">ajax局部渲染</h3>
+    <ul>
+        @for(dict in dicts!){
+            <li>${dict.dictName}</li>
+        @}
+    </ul>
+@}
+</body>

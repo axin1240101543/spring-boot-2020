@@ -1,0 +1,9 @@
+@layout("layout.html", {title:"新建博客", isShow:true}){
+    <form action="${ctxPath}/saveBlog" method="post" accept-charset="UTF-8">
+        <input type="text" id="title" name="title" placeholder="标题">
+        <input type="text" id="category" name="category" placeholder="类型">
+        <input type="text" id="img" name="img" placeholder="图片地址">
+        <textarea rows="10" id="content" name="content" placeholder="博客内容"></textarea>
+        <button type="submit">保存</button>
+    </form>
+@}

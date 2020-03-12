@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8" />
+    <title>用户信息编辑</title>
+    <link rel="stylesheet" th:href="@{/layui.2.2.3/layui/css/layui.css}" media="all"/>
+</head>
+<body class="childrenBody">
+<form class="layui-form" style="width:80%;">
+    <div class="layui-row" style="margin-top: 20px;">
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">姓名</label>
+            <div class="layui-input-block">
+                <input type="hidden" name="id" th:value="${user.id}" />
+                <input type="text" name="name" th:value="${user.name}" class="layui-input" th:readonly="true" />
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">性别</label>
+            <div class="layui-input-block">
+                <input type="text" name="sex" th:value="${user.sex}" class="layui-input" th:readonly="true" />
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">年龄</label>
+            <div class="layui-input-block">
+                <input type="text" name="age" th:value="${user.age}" class="layui-input" th:readonly="true" />
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <label class="layui-form-label">电话</label>
+            <div class="layui-input-block">
+                <input type="text" name="mobile" th:value="${user.mobile}" class="layui-input" lay-verify="required" />
+            </div>
+        </div>
+
+        <div class="layui-form-item">
+            <div class="layui-input-block" style="text-align: center">
+                <button class="layui-btn" lay-submit="" lay-filter="saveSubmit">保存</button>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+<script type="text/javascript" th:src="@{/layui.2.2.3/layui/layui.js}"></script>
+<script type="text/javascript" th:src="@{/js/user.js}"></script>
+<script type="text/javascript" th:src="@{/js/base.js}"></script>
+</html>

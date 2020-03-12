@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="UTF-8">
+    <title>用户列表</title>
+    <link rel="stylesheet" th:href="@{/layui.2.2.3/layui/css/layui.css}" media="all"/>
+</head>
+<body class="childrenBody">
+<div style="width: 100%; text-align: center">
+    <form class="layui-form">
+        <blockquote class="layui-elem-quote" style="border-left-width: 0px;">
+            <div class="layui-inline">
+                <div class="layui-input-inline">
+                    <input type="text" id="name" name="name" placeholder="姓名" class="layui-input"/>
+                </div>
+                <div class="layui-input-inline">
+                    <label class="layui-form-label">性别</label>
+                    <div class="layui-input-inline">
+                        <select id="sex" name="sex">
+                            <option value="">全部</option>
+                            <option th:each="d : ${data}" th:value="${d.dictName}" th:text="${d.dictName}"></option>
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-input-inline">
+                    <input type="text" id="startTime" name="startTime" placeholder="开始时间" class="layui-input" th:readonly="true"/>
+                </div>
+                <div class="layui-input-inline">
+                    <input type="text" id="endTime" name="endTime" placeholder="结束时间" class="layui-input" th:readonly="true"/>
+                </div>
+            </div>
+
+            <div class="layui-inline">
+                <a class="layui-btn searchBtn"><i class="layui-icon">&#xe615;</i>查询</a>
+            </div>
+            <div class="layui-inline">
+                <a class="layui-btn add"><i class="layui-icon">&#xe634;</i>添加</a>
+            </div>
+        </blockquote>
+    </form>
+</div>
+<!--<table class="layui-table">
+    <tr>
+        <th>姓名</th>
+        <th>性别</th>
+        <th>年龄</th>
+        <th>号码</th>
+        <th>创建时间</th>
+        <th>更新时间</th>
+    </tr>
+    <tr th:if="${users.size()} eq 0">
+        <td colspan="6">没有用户信息！！</td>
+    </tr>
+    <tr th:each="user : ${users}">
+        <td th:text="${user.name}"/>
+        <td th:text="${user.sex}"/>
+        <td th:text="${user.age}"/>
+        <td th:text="${user.mobile}"/>
+        <td th:text="${#dates.format(user.createTime, 'yyyy-MM-dd HH:mm:ss')}"/>
+        <td th:text="${#dates.format(user.updateTime, 'yyyy-MM-dd HH:mm:ss')}"/>
+    </tr>
+</table>-->
+<table class="layui-table" id="dataTable"></table>
+
+<script type="text/html" id="operationTemplet">
+    <a class='layui-btn layui-btn-xs edit' data-id='{{d.id}}'>修改</a>
+</script>
+</body>
+<script type="text/javascript" th:src="@{/layui.2.2.3/layui/layui.js}"></script>
+<script type="text/javascript" th:src="@{/js/user.js}"></script>
+<script type="text/javascript" th:src="@{/js/base.js}"></script>
+</html>
