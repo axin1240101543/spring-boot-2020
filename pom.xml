@@ -13,6 +13,7 @@
 		<module>spring-boot-utils</module>
 		<module>spring-boot-security</module>
 		<module>spring-boot-beetl</module>
+		<module>spring-boot-easyCode</module>
     </modules>
 
     <parent>
