@@ -7,7 +7,7 @@ public class ThreadTest {
         System.out.println("current thread is :" + Thread.currentThread().getName());
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(){
             @Override
             public void run() {
@@ -17,6 +17,8 @@ public class ThreadTest {
         //直接调用run方法
         //t.run();
         //调用start方法
+        t.start();
+        t.join();
         t.start();
     }
 
