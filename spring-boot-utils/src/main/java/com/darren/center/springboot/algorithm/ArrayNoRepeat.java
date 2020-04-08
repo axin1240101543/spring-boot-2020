@@ -8,16 +8,19 @@ public class ArrayNoRepeat {
         int[] temArr = new int[arr.length];
         int t = 0;
         for (int i = 0; i < arr.length; i++) {
+            System.out.println("第" + (i+1) + "趟");
             boolean b = true;
             for (int j = i+1; j < arr.length; j++) {
                 //当arr[i]（前一个元素）和arr[j]（后一个元素 i+1）相等时，b为false，内层循环break结束，外层此次循环结束，元素不会添加到temArr[]
                 //当arr[i]（前一个元素）和arr[j]（后一个元素 i+1）不相等时，b为true，内层循环比较arr[i]后面的所有元素，如果没有相等的元素，那么b还是为true，将arr[i]添加到temArr[]
+                System.out.println("第" + j + "次去重，" + arr[i] + "和" + arr[j] + "比较");
                 if (arr[i] == arr[j]){
                     b = false;
                     break;
                 }
             }
             if (b){
+                System.out.println("第" + (i+1) + "趟，将元素" + arr[i] + "加入temArr[]");
                 temArr[t] = arr[i];
                 t++;
             }
