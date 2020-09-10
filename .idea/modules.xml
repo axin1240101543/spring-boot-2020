@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/spring-boot.iml" filepath="$PROJECT_DIR$/spring-boot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-beetl/spring-boot-beetl.iml" filepath="$PROJECT_DIR$/spring-boot-beetl/spring-boot-beetl.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-distributedlock/spring-boot-distributedlock.iml" filepath="$PROJECT_DIR$/spring-boot-distributedlock/spring-boot-distributedlock.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-easyCode/spring-boot-easyCode.iml" filepath="$PROJECT_DIR$/spring-boot-easyCode/spring-boot-easyCode.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-security/spring-boot-security.iml" filepath="$PROJECT_DIR$/spring-boot-security/spring-boot-security.iml" />
+      <module fileurl="file://$PROJECT_DIR$/spring-boot-utils/spring-boot-utils.iml" filepath="$PROJECT_DIR$/spring-boot-utils/spring-boot-utils.iml" />
+    </modules>
+  </component>
+</project>

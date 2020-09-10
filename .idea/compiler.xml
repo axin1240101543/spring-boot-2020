@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="spring-boot-security" />
+        <module name="spring-boot-distributedlock" />
+        <module name="spring-boot-easyCode" />
+        <module name="spring-boot-beetl" />
+        <module name="spring-boot-utils" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring-boot" target="1.8" />
+      <module name="spring-boot-beetl" target="1.8" />
+      <module name="spring-boot-distributedlock" target="1.8" />
+      <module name="spring-boot-easyCode" target="1.8" />
+      <module name="spring-boot-security" target="1.8" />
+      <module name="spring-boot-utils" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="spring-boot-beetl" options="-parameters" />
+      <module name="spring-boot-distributedlock" options="-parameters" />
+      <module name="spring-boot-easyCode" options="-parameters" />
+      <module name="spring-boot-security" options="-parameters" />
+      <module name="spring-boot-utils" options="-parameters" />
+    </option>
+  </component>
+</project>
