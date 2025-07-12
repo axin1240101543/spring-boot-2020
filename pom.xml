@@ -109,7 +109,7 @@
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>3.4</version>
+            <version>3.18.0</version>
         </dependency>
         <!-- WebJars：把前端资源包以jar包形式进行依赖管理，相当于后端的maven/gradle -->
         <!-- <link th:href="@{/webjars/bootstrap/3.3.6/dist/css/bootstrap.css}" rel="stylesheet"></link> -->
